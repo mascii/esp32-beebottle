@@ -5,6 +5,9 @@ ESP32 で MQTT over TLS (Port: 8883) を用いて Beebottle に繋ぐテスト
 ## このリポジトリ内のファイルの説明
 * esp32-beebottle.ino
   * Arduino IDE スケッチ
+    * Requirement
+      * [knolleary/pubsubclient](https://github.com/knolleary/pubsubclient)
+      * [bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 * config_sample.h
   * config.h のテンプレート
 * convcert.sh
