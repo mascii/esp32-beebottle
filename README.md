@@ -1,6 +1,7 @@
 # esp32-beebottle
 ## 概要
 ESP32 で MQTT over TLS (Port: 8883) を用いて Beebottle に繋ぐテスト
+https://qiita.com/mascii/items/1db06be0950a47e6c720
 
 ## このリポジトリ内のファイルの説明
 * esp32-beebottle.ino
