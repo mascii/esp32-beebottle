@@ -51,6 +51,7 @@ PubSubClient client(host, 8883, wifiClient);
 void setup() {
   Serial.begin(115200);
   Serial.println();
+  WiFi.mode(WIFI_STA);
   pinMode(LED_PIN, OUTPUT);
 }
 
