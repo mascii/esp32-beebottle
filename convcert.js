@@ -16,7 +16,7 @@ try {
   if (argv.length === 3) {
     var fs = require('fs');
     var filename = argv[2];
-    var pem = fs.readFileSync(filename, 'utf8').trim(); // String.prototype.trim(): ES2015
+    var pem = fs.readFileSync(filename, 'utf8').trim();
     var convertedPem = convcert(pem);
     fs.writeFileSync('./certificate.h', convertedPem);
   }
