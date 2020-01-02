@@ -24,15 +24,15 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(buffer);
 
   // 受け取ったJSON形式のペイロードをデコードする
-  StaticJsonBuffer<MQTT_MAX_PACKET_SIZE> jsonBuffer;
-  JsonObject& root = jsonBuffer.parseObject(buffer);
+  StaticJsonDocument<MQTT_MAX_PACKET_SIZE> doc;
+  DeserializationError error = deserializeJson(doc, buffer);
 
-  if (!root.success()) {
-    Serial.println("parseObject() failed");
+  if (error) {
+    Serial.println("deserializeJson() failed");
     return;
   }
 
-  const char* parsedPayload = root["data"];
+  const char* parsedPayload = doc["data"];
 
   if (parsedPayload != NULL) {
     Serial.print("payload: ");
